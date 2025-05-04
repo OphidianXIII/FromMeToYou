@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Message Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      background-color: #e74c3c;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #c0392b;
+    }
+    #message {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      color: #333;
+      text-align: center;
+      max-width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="showRandomMessage()">Click Me</button>
+  <div id="message"></div>
+
+  <script>
+    const messages = [
+      "You're doing great!",
+      "Keep going, you're almost there!",
+      "Believe in yourself!",
+      "Every day is a fresh start.",
+      "You've got this!",
+      "Smile – it's contagious!",
+      "One step at a time.",
+      "You're stronger than you think.",
+      "Today is your day.",
+      "You matter."
+    ];
+
+    function showRandomMessage() {
+      const index = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[index];
+    }
+  </script>
+</body>
+</html>
